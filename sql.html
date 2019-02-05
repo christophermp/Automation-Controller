@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Hello World!</title>
+    <button class="btn btn-success"><a style="color:white" href="index.html">Hjem</a></button>
+</head>
+
+<body>
+    <h1>Connecting to MySQL</h1>
+    <br>
+    <input type="button" id="action-btn" value="Retrieve 10 first rows in the database" />
+    <table id="table" border="1">
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+<script>
+    var mysql = require('mysql');
+
+    function el(selector) {
+        return document.getElementById(selector);
+    }
+
+    el('action-btn').addEventListener('click', function () {
+        // Get the mysql service
+        getFirstTenRows(function (rows) {
+            var html = '';
+
+            rows.forEach(function (row) {
+                html += '<tr>';
+                html += '<td>';
+                html += row.id;
+                html += '</td>';
+                html += '<td>';
+                html += row.name;
+                html += '</td>';
+                html += '</tr>';
+                console.log(row);
+            });
+
+            document.querySelector('#table > tbody').innerHTML = html;
+        });
+    }, false);
+
+    function getFirstTenRows(callback) {
+        var mysql = require('mysql');
+
+        // Add the credentials to access your database
+        var connection = mysql.createConnection({
+            host: '127.0.0.1',
+            port: '3306',
+            user: 'application',
+            password: "password",
+            database: 'ourcodeworld'
+        });
+
+        // connect to mysql
+        connection.connect(function (err) {
+            // in case of error
+            if (err) {
+                console.log(err.code);
+                console.log(err.fatal);
+            }
+        });
+
+        // Perform a query
+        $query = 'SELECT `id`,`name` FROM `articles` LIMIT 10';
+
+        connection.query($query, function (err, rows, fields) {
+            if (err) {
+                console.log("An error ocurred performing the query.");
+                console.log(err);
+                return;
+            }
+
+            callback(rows);
+
+            console.log("Query succesfully executed");
+        });
+
+        // Close the connection
+        connection.end(function () {
+            // The connection has been closed
+        });
+    }
+</script>
+
+</html>

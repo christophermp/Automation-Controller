@@ -1,0 +1,36 @@
+<head>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="macros.js"></script>
+  <script src="src/macros2.js"></script>
+</head>
+
+<body>
+  <br>
+  <div class="container">
+    <h3>Locked macro</h3>
+    <button class="btn btn-success" onclick="runMacro()">Lights Off</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3>"Dynamic macro, run macroName"</h3>
+    <input type="text" placeholder="Eks: LightsOff" id="macro" />
+    <button id="add" class="btn btn-warning" onclick="runMacro2()">Run custom macro</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button class="btn btn-success"><a style="color:white" href="dash.html">DashBoard</a></button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3>Test triggers</h3>
+    <button class="btn btn-danger" onclick="runMacro()">Lights Off</button>
+    <button class="btn btn-danger" onclick="runMacro()">Lights Off</button>
+    <button class="btn btn-danger" onclick="runMacro()">Lights Off</button>
+    <button class="btn btn-danger" onclick="runMacro()">Lights Off</button>
+  </div>
+
+  <body>

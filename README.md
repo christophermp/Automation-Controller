@@ -22,6 +22,17 @@ https://stackabuse.com/nedb-a-lightweight-javascript-database/
 
 https://stackoverflow.com/questions/35461622/nodejs-how-to-send-two-commands-on-tcp-net-socket-using-nodejs-net-socket
 
+## Persisting Data with NeDB
+
+NeDB stands for Node.js Embedded Database, it's a pure JavaScript module with no binary dependency and its API is a subset of MongoDB. NeDB can be used as in-memory or as a persistent database.
+
+Installing NeDB
+
+```bash
+# You can install NeDB via NPM with:
+npm install nedb --save
+```
+
 ## To Use
 
 To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:

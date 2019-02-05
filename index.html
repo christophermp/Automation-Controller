@@ -3,6 +3,7 @@
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="macros.js"></script>
   <script src="src/macros2.js"></script>
+  <script src="db_writer2.js"></script>
 </head>
 
 <body>
@@ -17,6 +18,14 @@
     <h3>"Dynamic macro, run macroName"</h3>
     <input type="text" placeholder="Eks: LightsOff" id="macro" />
     <button id="add" class="btn btn-warning" onclick="runMacro2()">Run custom macro</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3>"Add macro to database"</h3>
+    <input type="text" placeholder="Eks: LightsOff" id="macroName1" />
+    <input type="text" placeholder="Eks: LightsOff" id="macroName2" />
+    <button id="add" class="btn btn-warning" onclick="writeMacro()">Run custom macro</button>
     <br>
     <br>
     <br>

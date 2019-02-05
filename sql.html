@@ -51,11 +51,10 @@
 
         // Add the credentials to access your database
         var connection = mysql.createConnection({
-            host: '127.0.0.1',
-            port: '3306',
-            user: 'application',
-            password: "password",
-            database: 'ourcodeworld'
+            host: "localhost",
+            user: "root",
+            password: "123456789",
+            database: 'mydb'
         });
 
         // connect to mysql
@@ -68,7 +67,7 @@
         });
 
         // Perform a query
-        $query = 'SELECT `id`,`name` FROM `articles` LIMIT 10';
+        $query = 'SELECT `id`,`name` FROM `macros` LIMIT 10';
 
         connection.query($query, function (err, rows, fields) {
             if (err) {

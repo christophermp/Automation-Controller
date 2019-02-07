@@ -5,6 +5,7 @@
   <script src="src/macros2.js"></script>
   <script src="db_writer2.js"></script>
   <script src="node_modules/nedb/browser-version/out/nedb.js"></script>
+  <script src="ButtonDBhandler.js"></script>
   <script>
     var Datastrore = require("nedb");
     var db = new Datastrore({ filename: "macros.db" });
@@ -38,10 +39,11 @@
     <button class="btn btn-success" onclick="runMacro()">Lights Off</button>
 
     <button class="btn btn-danger" onclick="runMacro()">Lights Off</button>
+    <button class="btn btn-danger" onclick="jsonButton()">JSON DB</button>
     <br />
     <br />
-    <button onclick="myFunction()">Try it</button>
-    <span>element</span>
+    <ul id="element"></ul>
+    <ul id="buttons"></ul>
   </div>
 
   <body></body>

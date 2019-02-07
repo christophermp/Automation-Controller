@@ -1,0 +1,48 @@
+<head>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="macros.js"></script>
+  <script src="src/macros2.js"></script>
+  <script src="db_writer2.js"></script>
+  <script src="node_modules/nedb/browser-version/out/nedb.js"></script>
+  <script>
+    var Datastrore = require("nedb");
+    var db = new Datastrore({ filename: "macros.db" });
+    var docs = "";
+    db.loadDatabase(function(err) {
+      db.find({}, function(err, docs) {
+        console.log(docs); //all docs
+
+        for (var doc in docs) {
+          var element = document.createElement("button");
+          //Assign different attributes to the element.
+          element.setAttribute("name", doc.name);
+          element.innerHTML = doc.name;
+          element.setAttribute("id", doc._id);
+          //element.setAttribute("onclick", ); If you wish to add click event
+
+          //Append the element in page (in span).
+          document.body.appendChild(element);
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <br />
+  <div class="container">
+    <button class="btn btn-danger">
+      <a style="color:rgb(248, 245, 245)" href="index.html">HOME</a>
+    </button>
+    <h3>Locked macro</h3>
+    <button class="btn btn-success" onclick="runMacro()">Lights Off</button>
+
+    <button class="btn btn-danger" onclick="runMacro()">Lights Off</button>
+    <br />
+    <br />
+    <button onclick="myFunction()">Try it</button>
+    <span>element</span>
+  </div>
+
+  <body></body>
+</body>

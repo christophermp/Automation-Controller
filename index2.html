@@ -1,0 +1,58 @@
+<head>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css" />
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="./src/macros.js"></script>
+  <script src="./src/macros2.js"></script>
+  <script src="./src/db_writer2.js"></script>
+  <script src="./src/status.js"></script>
+  <link rel="stylesheet" type="text/css" href="./src/custom.css">
+</head>
+
+<body class="body" onload="updateIndicator()" ononline="updateIndicator()" onoffline="updateIndicator()">
+  <!-- Open the output in a new blank tab (Click the arrow next to "Show Output" button) and resize the browser window to understand how the Bootstrap responsive grid system works. -->
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="header">
+        <h1>Automation MGM</h1>
+        <p>The network is: <span id="indicator">(state unknown)</span>
+
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-7">
+      <div class="content">
+        <h2 class="h2">Dynamic macro</h2>
+        <input type="text" class="input" placeholder="Eks: run LightsOff" id="macro" />
+        <button id="add" class="btn btn-warning" onclick="runMacro2()">
+          Run custom macro
+        </button>
+        <p id="connectedTo" type="text" class="font-weight-bold"></p>
+        <p id="macroSent" type="text"></p>
+        <button class="btn btn-danger" onclick="runMacro()">Lights Off</button>
+        <button class="btn btn-danger" onclick="runMacro()">Lights Off</button>
+        <button class="btn btn-danger" onclick="runMacro()">Lights Off</button>
+        <button class="btn btn-danger" onclick="runMacro()">Lights Off</button>
+      </div>
+
+    </div>
+    <div class="col-sm-5">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="sidebar-top"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="sidebar-bottom"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="footer"></div>
+    </div>
+  </div>
+</body>
+</body>

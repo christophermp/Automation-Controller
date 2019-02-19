@@ -20,8 +20,12 @@ function runMacro2() {
     },
     function() {
       console.log("connected to " + config.host + ":" + config.port);
+      document.getElementById("connectedTo").innerHTML =
+        "Connected to " + config.host + ":" + config.port;
       client.write(move.forward, function() {
-        console.log("move forward command sent");
+        console.log("Command " + name + " sent");
+        document.getElementById("macroSent").innerHTML =
+          "Macro: " + name + " is sent!";
       });
     }
   );

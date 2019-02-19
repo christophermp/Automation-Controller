@@ -26,6 +26,7 @@
     "electron-store": "^2.0.0",
     "firebase": "^5.8.2",
     "jquery": "^3.3.1",
+    "jquery.terminal": "^2.2.0",
     "mssql": "^4.3.1",
     "mysql": "^2.16.0",
     "nedb": "^1.8.0",

@@ -4,72 +4,83 @@
   <script src="./src/macros.js"></script>
   <script src="./src/macros2.js"></script>
   <script src="./src/db_writer2.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyA6sUtmrSLruKtQaNQv0kbZEV7VBmWk1CQ",
-      authDomain: "cinema-mgm.firebaseapp.com",
-      databaseURL: "https://cinema-mgm.firebaseio.com",
-      projectId: "cinema-mgm",
-      storageBucket: "cinema-mgm.appspot.com",
-      messagingSenderId: "404410466120"
-    };
-    firebase.initializeApp(config);
-  </script>
+  <link rel="stylesheet" type="text/css" href="./src/custom.css">
 </head>
 
-<body>
+<body class="body">
   <br />
-  <div class="container">
-    <h3>Locked macro</h3>
-    <button class="btn btn-success" onclick="runMacro()">Lights Off</button>
-    <br />
-    <br />
-    <br />
-    <br />
-    <h3>"Dynamic macro, run macroName"</h3>
-    <input type="text" placeholder="Eks: LightsOff" id="macro" />
-    <button id="add" class="btn btn-warning" onclick="runMacro2()">
-      Run custom macro
-    </button>
-    <br />
-    <br />
-    <br />
-    <br />
-    <h3>"Add macro to database"</h3>
-    <input type="text" placeholder="Eks: LightsOff" id="macroName1" />
-    <input type="text" placeholder="Eks: LightsOff" id="macroName2" />
-    <button id="add" class="btn btn-warning" onclick="writeMacro()">
-      Run custom macro
-    </button>
-    <br />
-    <br />
-    <br />
-    <br />
-    <button class="btn btn-success">
-      <a style="color:white" href="pages/dash.html">DASHBOARD</a>
-    </button>
-    <button class="btn btn-danger">
-      <a style="color:rgb(248, 245, 245)" href="pages/sql.html">SQL DATABASE</a>
-    </button>
-    <button class="btn btn-warning">
-      <a style="color:rgb(248, 245, 245)" href="pages/ButtonGen.html">BUTTON DB</a>
-    </button>
-    <button class="btn btn-danger">
-      <a style="color:rgb(248, 245, 245)" href="pages/FireBase.html">FIREBASE</a>
-    </button>
-    </button>
-    <br />
-    <br />
-    <br />
-    <br />
-    <h3>Test triggers</h3>
-    <button class="btn btn-danger" onclick="runMacro()">Lights Off</button>
-    <button class="btn btn-danger" onclick="runMacro()">Lights Off</button>
-    <button class="btn btn-danger" onclick="runMacro()">Lights Off</button>
-    <button class="btn btn-danger" onclick="runMacro()">Lights Off</button>
+  <div class=container>
+    <div class="row no-gutters">
+      <div class="col-12 col-sm-6 col-md-8">
+        <h2>Dynamic macro</h2>
+        <input type="text" placeholder="Eks: LightsOff" id="macro" />
+        <button id="add" class="btn btn-warning" onclick="runMacro2()">
+          Run custom macro
+        </button>
+      </div>
+      <div class="col-10 col-md-10">
+        <h2>Buttons:</h2>
+        <button class="btn btn-danger" mry-10 onclick="runMacro()">Lights Off</button>
+        <button class="btn btn-danger" mry-10 onclick="runMacro()">Lights Off</button>
+        <button class="btn btn-danger" mry-2 onclick="runMacro()">Lights Off</button>
+        <button class="btn btn-danger" mry-2 onclick="runMacro()">Lights Off</button>
+      </div>
+      <h3>Locked macro</h3>
+      <button class="btn btn-success" onclick="runMacro()">Lights Off</button>
+      <br />
+      <br />
+      <br />
+      <br />
+      <h3>"Dynamic macro, run macroName"</h3>
+      <input type="text" placeholder="Eks: LightsOff" id="macro" />
+      <button id="add" class="btn btn-warning" onclick="runMacro2()">
+        Run custom macro
+      </button>
+      <br />
+      <p id="connectedTo" type="text" class="font-weight-bold"></p>
+      <p id="macroSent" type="text"></p>
+      <br />
+      <br />
+      <br />
+      <h3>"Add macro to database"</h3>
+      <input type="text" placeholder="Eks: LightsOff" id="macroName1" />
+      <input type="text" placeholder="Eks: LightsOff" id="macroName2" />
+      <button id="add" class="btn btn-warning" onclick="writeMacro()">
+        Run custom macro
+      </button>
+      <br />
+      <br />
+      <br />
+      <br />
+      <button class="btn btn-success">
+        <a style="color:white" href="pages/dash.html">DASHBOARD</a>
+      </button>
+      <button class="btn btn-danger">
+        <a style="color:rgb(248, 245, 245)" href="pages/sql.html">SQL DATABASE</a>
+      </button>
+      <button class="btn btn-warning">
+        <a style="color:rgb(248, 245, 245)" href="pages/ButtonGen.html">BUTTON DB</a>
+      </button>
+      <button class="btn btn-danger">
+        <a style="color:rgb(248, 245, 245)" href="pages/FireBase.html">FIREBASE</a>
+      </button>
+      <br />
+      <br />
+      <br />
+      <button class="btn btn-danger">
+        <a style="color:rgb(248, 245, 245)" href="index2.html">INDEX 2</a>
+      </button>
+      <br />
+      <h3>Test triggers</h3>
+      <button class="btn btn-danger" onclick="runMacro()">Lights Off</button>
+      <button class="btn btn-danger" onclick="runMacro()">Lights Off</button>
+      <button class="btn btn-danger" onclick="runMacro()">Lights Off</button>
+      <button class="btn btn-danger" onclick="runMacro()">Lights Off</button>
+    </div>
   </div>
+
+  <br />
+  <br />
 
   <body></body>
 </body>

@@ -1,0 +1,57 @@
+/* remove rounding from cards, buttons and inputs */
+.card,
+.btn,
+.form-control {
+  border-radius: 10;
+  margin: 4px 5px;
+}
+.btn-primary {
+  background-color: red;
+  margin: 4px 10px;
+}
+.body {
+  background: #2f2f2f;
+  margin: 4px 10px;
+}
+.row > div {
+  margin-bottom: 15px;
+}
+.header {
+  min-height: 90px;
+}
+.footer {
+  min-height: 60px;
+  background: #2f2f2f;
+}
+
+.content {
+  background: #b4bac0;
+  min-height: 300px;
+}
+.sidebar-top {
+  min-height: 140px;
+  background: #dbdfe7;
+}
+.sidebar-bottom {
+  min-height: 145px;
+  background: #7e8aa0;
+  margin-bottom: -15px;
+}
+.input {
+  margin: 4px 10px;
+}
+.h2 {
+  margin: 4px 5px;
+}
+.header h1 {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  color: white;
+}
+.header p {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  color: white;
+}

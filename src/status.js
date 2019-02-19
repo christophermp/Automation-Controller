@@ -15,6 +15,8 @@ function ping() {
         ? "host " + host + " is alive"
         : "host " + host + " is dead";
       console.log(msg);
+      document.getElementById("macroSent").innerHTML =
+        "Macro: " + name + " is sent!";
     });
   });
 }

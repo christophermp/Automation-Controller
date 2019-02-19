@@ -55,3 +55,9 @@
   left: 10px;
   color: white;
 }
+.content p {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  color: red;
+}

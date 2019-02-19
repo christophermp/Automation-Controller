@@ -24,6 +24,7 @@
     "bootstrap": "^4.2.1",
     "electron-json-storage": "^4.1.6",
     "electron-store": "^2.0.0",
+    "evilscan": "^1.7.5",
     "firebase": "^5.8.2",
     "jquery": "^3.3.1",
     "jquery.terminal": "^2.2.0",

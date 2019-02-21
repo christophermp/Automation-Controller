@@ -5,6 +5,7 @@
   <script src="./src/macros2.js"></script>
   <script src="./src/db_writer2.js"></script>
   <script src="./src/status.js"></script>
+  <script src="./src/snmp.js"></script>
   <link rel="stylesheet" type="text/css" href="./src/custom.css">
 </head>
 
@@ -43,6 +44,13 @@
             <h3>Ping:</h3>
             <input type="text" class="input" placeholder="Type ip address" id="ipAddress" />
             <button id="add" class="btn btn-danger" onclick="ping()">Ping</button>
+            </br>
+            <h4>Port information:</h4>
+            <p>Port Status: </p>
+            <p id="pingStatus" type="text"></p>
+            <p id="pingStatus" type="text"></p>
+            <p id="ip" type="text"></p>
+            <p id="port" type="text"></p>
             <p id="pingStatus" type="text"></p>
           </div>
         </div>
@@ -50,6 +58,7 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="sidebar-bottom">
+
           </div>
         </div>
       </div>
@@ -60,5 +69,4 @@
       <div class="footer"></div>
     </div>
   </div>
-</body>
 </body>

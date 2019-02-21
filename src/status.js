@@ -11,42 +11,42 @@ function ping() {
   //var hosts = ["192.168.0.100", "google.com", "yahoo.com"];
   var hosts = [document.getElementById("ipAddress").value];
   // edited host.forEach
-  hosts.forEach(function (host) {
-    ping.sys.probe(host, function (isAlive) {
+  hosts.forEach(function(host) {
+    ping.sys.probe(host, function(isAlive) {
       var msg = isAlive
         ? "host " + host + " is alive"
         : "host " + host + " is dead";
       console.log(msg);
-      document.getElementById("pingStatus").innerHTML =
-        "Pinging " + msg;
+      document.getElementById("pingStatus").innerHTML = "Pinging " + msg;
     });
   });
 }
 
 function scanner() {
-  var evilscan = require('evilscan');
+  var evilscan = require("evilscan");
 
   var options = {
-    target: '10.0.0.161',
-    port: '21-23',
-    status: 'TROU', // Timeout, Refused, Open, Unreachable
+    target: "192.168.0.100",
+    port: "9600",
+    status: "TROU", // Timeout, Refused, Open, Unreachable
     banner: true
   };
 
   var scanner = new evilscan(options);
 
-  scanner.on('result', function (data) {
+  scanner.on("result", function(data) {
     // fired when item is matching options
     console.log(data);
-    document.getElementById("pingStatus").innerHTML =
-      JSON.stringify(data, undefined, 2);
+    document.getElementById("ip").innerHTML = data.ip;
+    document.getElementById("port").innerHTML = data.port;
+    document.getElementById("pingStatus").innerHTML = data.status;
   });
 
-  scanner.on('error', function (err) {
+  scanner.on("error", function(err) {
     throw new Error(data.toString());
   });
 
-  scanner.on('done', function () {
+  scanner.on("done", function() {
     // finished !
   });
 

@@ -61,3 +61,10 @@
   left: 10px;
   color: red;
 }
+.console-log-div {
+  border: 1px solid gray;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 95% !important;
+  background-color: #efefef;
+}

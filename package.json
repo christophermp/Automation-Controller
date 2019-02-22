@@ -34,6 +34,8 @@
     "nedb": "^1.8.0",
     "net-snmp": "^1.2.4",
     "ping": "^0.2.2",
-    "python-shell": "^1.0.7"
+    "python-shell": "^1.0.7",
+    "soap": "^0.26.0",
+    "strong-soap": "^1.16.0"
   }
 }
